@@ -1,0 +1,761 @@
+[{
+  "history_id" : "3womtfrmq9r",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1651521828492,
+  "history_end_time" : 1651521833105,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0c1nsh2mmkm",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1649179875641,
+  "history_end_time" : 1649179880373,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vq63eo2w3zj",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1643666954950,
+  "history_end_time" : 1643666954971,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "bzjduo1c994",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1643125045072,
+  "history_end_time" : 1643125047219,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lmizhg88hqn",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642966286802,
+  "history_end_time" : 1642966286813,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "j1kajlw6v5r",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642958111649,
+  "history_end_time" : 1642958111692,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ilfrmzhav7i",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "  File \"VisualizeFeatures.py\", line 9\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642316562124,
+  "history_end_time" : 1642316562435,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i6lxaghs420",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642233092910,
+  "history_end_time" : 1642233098356,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rvzcct5emad",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642233046938,
+  "history_end_time" : 1642233049461,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4uz24pp9yir",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642230157413,
+  "history_end_time" : 1642230159139,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "unp0ihqqdqg",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642230113152,
+  "history_end_time" : 1642230115211,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "azqnpmydffc",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642229593958,
+  "history_end_time" : 1642229596044,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "g1nsvkmb6qe",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642227708319,
+  "history_end_time" : 1642227723160,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7di79t0d0kw",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "  File \"VisualizeFeatures.py\", line 9\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642226784488,
+  "history_end_time" : 1642226784618,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fl3qtrkkera",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642116733180,
+  "history_end_time" : 1642116747458,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6l72s7nwauu",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642116682797,
+  "history_end_time" : 1642116682873,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "j7mux6p8fyg",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1642022947782,
+  "history_end_time" : 1642022962491,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rq5kfbsmboj",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "  File \"VisualizeFeatures.py\", line 9\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642022907589,
+  "history_end_time" : 1642022907730,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8nx4d5r7jg3",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "loop.py\nGetEmissionsData.py\nExploreDataProperties.py\nVisualizeFeatures.py\nDeepLearning_NN.py\nTrainModel_LSTM.py\ntest1.py\nData Preprocessing.py\nSVR Model.py\nRandom Forest Model.py\nDeploy ML.py\nTraceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n",
+  "history_begin_time" : 1641215993073,
+  "history_end_time" : 1641215998651,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "t5g55h",
+  "indicator" : "Done"
+},{
+  "history_id" : "dq75n8hekgm",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1639374648417,
+  "history_end_time" : 1639374651735,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "4e9gdweu7v8",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1639373552656,
+  "history_end_time" : 1639373555353,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8mcv33hul9l",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig(f'{home}/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1639372893362,
+  "history_end_time" : 1639372896466,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cyafgafg78f",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/l21-n02609-comm/gw-workspace/5eOIwUMcySnvilUCs7sVVpsGZl/VisualizeFeatures.py\", line 26, in <module>\n    plt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/pyplot.py\", line 966, in savefig\n    res = fig.savefig(*args, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/figure.py\", line 3015, in savefig\n    self.canvas.print_figure(fname, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backend_bases.py\", line 2255, in print_figure\n    result = print_method(\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backend_bases.py\", line 1669, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py\", line 509, in print_png\n    mpl.image.imsave(\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/image.py\", line 1616, in imsave\n    image.save(fname, **pil_kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/PIL/Image.py\", line 2237, in save\n    fp = builtins.open(filename, \"w+b\")\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/uhhmed/geoweaver_demo/features.png'\n",
+  "history_begin_time" : 1639372514538,
+  "history_end_time" : 1639372538868,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m8nt0ub1off",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345542142,
+  "history_end_time" : 1639345542278,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "n84e1dz4a4s",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345434923,
+  "history_end_time" : 1639345435081,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9oj6u7nhvtr",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345392230,
+  "history_end_time" : 1639345392341,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2esm0iwy7dy",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345252227,
+  "history_end_time" : 1639345252237,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3h8zsefahmk",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639344890425,
+  "history_end_time" : 1639344890465,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "blo1qfvmva2",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639326039881,
+  "history_end_time" : 1639326040017,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ih2mejnysx0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325966148,
+  "history_end_time" : 1639325966204,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mwoxtjp8q23",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325948823,
+  "history_end_time" : 1639325948923,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "qf5pnaz181k",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324416399,
+  "history_end_time" : 1639324416535,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uzv41xi21c9",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324283051,
+  "history_end_time" : 1639324283186,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lm8ig4jxge8",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324210053,
+  "history_end_time" : 1639324210204,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yl7a3ns3uyw",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324156169,
+  "history_end_time" : 1639324156308,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1kdhdw4adc3",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639282295042,
+  "history_end_time" : 1639282295236,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jausacngdr8",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639281628195,
+  "history_end_time" : 1639281628378,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ia0k9f8rewu",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639280122877,
+  "history_end_time" : 1639280122888,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "eacn8xhwtlj",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 6, in <module>\n    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 1184, in subplots\n    fig = figure(**fig_kw)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636386556430,
+  "history_end_time" : 1636386559763,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kbaa08xiq0n",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 6, in <module>\n    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 1184, in subplots\n    fig = figure(**fig_kw)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636145197702,
+  "history_end_time" : 1636145200022,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mvl0z39kdvn",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 3, in <module>\n    import seaborn as sns\nModuleNotFoundError: No module named 'seaborn'\n",
+  "history_begin_time" : 1636062893131,
+  "history_end_time" : 1636062893963,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0h02v62mes0",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 6, in <module>\n    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 1184, in subplots\n    fig = figure(**fig_kw)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636062727073,
+  "history_end_time" : 1636062728079,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mqczsty7afi",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 6, in <module>\n    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 1184, in subplots\n    fig = figure(**fig_kw)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636062665089,
+  "history_end_time" : 1636062666130,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uefp1779cwt",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1636062371650,
+  "history_end_time" : 1636062373460,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "bvbz43b2tjr",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1636062274049,
+  "history_end_time" : 1636062276607,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "8fu3q5bz0go",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636052896630,
+  "history_end_time" : 1636052897641,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9z3uaa2kvi1",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636043258145,
+  "history_end_time" : 1636043259129,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fboia0foj98",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1636037958279,
+  "history_end_time" : 1636037960203,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "jtqnn19a7qg",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037743096,
+  "history_end_time" : 1636037745610,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "8wbxu6wyb1o",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037698167,
+  "history_end_time" : 1636037699151,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ngn4qftb30l",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037530196,
+  "history_end_time" : 1636037531188,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y78f5yj7e2s",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037157317,
+  "history_end_time" : 1636037158328,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2bpn31rbkdt",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037116555,
+  "history_end_time" : 1636037117548,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sh4m0607eub",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1636036978870,
+  "history_end_time" : 1636036981314,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "dviyxkv3yy6",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036822579,
+  "history_end_time" : 1636036823579,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i67wp3xlguc",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036573841,
+  "history_end_time" : 1636036574785,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "05du5m6b7ba",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036491799,
+  "history_end_time" : 1636036492933,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i0o4zehp7w0",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036414421,
+  "history_end_time" : 1636036415432,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0wyq414vvi3",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036326217,
+  "history_end_time" : 1636036326976,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6q5yht50b0n",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036304126,
+  "history_end_time" : 1636036304919,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "087i46jaky8",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036262070,
+  "history_end_time" : 1636036262817,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "76zxnqpdvce",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 2, in <module>\n    import matplotlib.pyplot as plt\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 115, in <module>\n    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/__init__.py\", line 63, in pylab_setup\n    [backend_name], 0)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/backend_tkagg.py\", line 4, in <module>\n    from . import tkagg  # Paint image to Tk photo blitter extension.\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/tkagg.py\", line 5, in <module>\n    from six.moves import tkinter as Tk\n  File \"/home/zsun/.local/lib/python2.7/site-packages/six.py\", line 213, in load_module\n    mod = mod._resolve()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/six.py\", line 120, in _resolve\n    return _import_module(self.mod)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/six.py\", line 87, in _import_module\n    __import__(name)\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 42, in <module>\n    raise ImportError, str(msg) + ', please install the python-tk package'\nImportError: No module named _tkinter, please install the python-tk package\n",
+  "history_begin_time" : 1636036129998,
+  "history_end_time" : 1636036130758,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "g3j4yhuqojd",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036084663,
+  "history_end_time" : 1636036085402,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "47d92szh7uf",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036021599,
+  "history_end_time" : 1636036022353,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "537z7ju0aq4",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1636035959864,
+  "history_end_time" : 1636035959880,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9ywg6gf4amp",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636035826436,
+  "history_end_time" : 1636035827190,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "irfe61d6mue",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034986761,
+  "history_end_time" : 1636034989334,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "je6w6ookk5w",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034771449,
+  "history_end_time" : 1636034772190,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m8jiuv5evwm",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034552930,
+  "history_end_time" : 1636034553974,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "v56fyux0ie2",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034394139,
+  "history_end_time" : 1636034394465,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jjrsj2x35o6",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034359965,
+  "history_end_time" : 1636034360290,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "x5i9tovz7xv",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033772904,
+  "history_end_time" : 1636033772929,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ejnjfduw0g3",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033713805,
+  "history_end_time" : 1636033713830,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tb62ab5dkus",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"VisualizeFeatures.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033713734,
+  "history_end_time" : 1636033713761,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a136ewm25uo",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "",
+  "history_begin_time" : 1635988621888,
+  "history_end_time" : 1635988624528,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "ia3j7nzt5s6",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nplt.style.use('fivethirtyeight')\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nfig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(10,8))  # 1 row, 2 columns\n\nemissions.plot(x='EPA_NO2/100000', y='TROPOMI*1000', kind='scatter', color='orange', ax=ax1)\n\nemissions.plot(x='Wind (Monthly)', y='Cloud Fraction (Monthly)', kind='scatter', color='green', ax=ax2)\n\nax1.set_xlabel('EPA_NO2/100000',fontsize=15)\nax2.set_xlabel('Wind (Monthly)',fontsize=15)\nax1.set_ylabel('TROPOMI*1000',fontsize=15)\nax2.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nemissions.plot(x='Temp (Monthly)', y='EPA_NO2/100000', kind='scatter', color='blue', ax=ax3)\n\nemissions.plot(x='EPA_NO2/100000', y='Cloud Fraction (Monthly)', kind='scatter', color='red', ax=ax4)\n\nax3.set_xlabel('Temp (Monthly)',fontsize=15)\nax4.set_xlabel('EPA_NO2/100000',fontsize=15)\nax3.set_ylabel('TROPOMI*1000',fontsize=15)\nax4.set_ylabel('Cloud Fraction (Monthly)',fontsize=15)\n\nplt.savefig('/Users/uhhmed/geoweaver_demo/features.png')\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1635887058002,
+  "history_end_time" : 1635887061002,
+  "history_notes" : null,
+  "history_process" : "iihen4",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},]

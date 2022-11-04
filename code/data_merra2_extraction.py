@@ -1,13 +1,10 @@
 """ 
 Check if host machine contains required packages to run this process. 
 If packages are not available, this process will install them.
-
 This process will get surface temperature, bias-corrected precipitation, 
 cloud fraction, and surface wind speed from different MERRA-2 collections,
 resample them to daily data and save to a csv file.
-
 User can specify duration of data to extract in lines (67 - 71).
-
 NOTE: This process also needs a NASA Earthdata account.
 Please update line 46 with a username and password to proceed with execution.
  """

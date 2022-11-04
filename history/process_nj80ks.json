@@ -1,0 +1,761 @@
+[{
+  "history_id" : "gla67vyufuf",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1651521826216,
+  "history_end_time" : 1651521826951,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wikdqqat3pb",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1649179873152,
+  "history_end_time" : 1649179873870,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oh9sdu38umm",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1643666954234,
+  "history_end_time" : 1643666954260,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6sassgnl2l2",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1643125042835,
+  "history_end_time" : 1643125043227,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "osf4atwv8d9",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642966286718,
+  "history_end_time" : 1642966286759,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "4my6bjb9q58",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642958110642,
+  "history_end_time" : 1642958110664,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zwavb8tib2t",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "  File \"ExploreDataProperties.py\", line 6\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642316560381,
+  "history_end_time" : 1642316560654,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xph1k0j2l0y",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642233091115,
+  "history_end_time" : 1642233091595,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j0p5vnydoz2",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642233045082,
+  "history_end_time" : 1642233045600,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5kdmkocztig",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642230154868,
+  "history_end_time" : 1642230155565,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xfwsraysm1j",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642230111269,
+  "history_end_time" : 1642230111765,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j6nt9cw0qy7",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642229591816,
+  "history_end_time" : 1642229592355,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "n7qws5ugddw",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642227705753,
+  "history_end_time" : 1642227706588,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2vjfplauarh",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "  File \"ExploreDataProperties.py\", line 6\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642226783093,
+  "history_end_time" : 1642226783261,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "00gtgrcirnp",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642116731192,
+  "history_end_time" : 1642116731955,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4632vphuypy",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642116681644,
+  "history_end_time" : 1642116681753,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "g67i1o1tf4y",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1642022945504,
+  "history_end_time" : 1642022946292,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6do6fgmcsgh",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "  File \"ExploreDataProperties.py\", line 6\n    emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n                                                                                    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642022905544,
+  "history_end_time" : 1642022905712,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ms3cyeybt33",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "loop.py\nGetEmissionsData.py\nExploreDataProperties.py\nVisualizeFeatures.py\nDeepLearning_NN.py\nTrainModel_LSTM.py\ntest1.py\nData Preprocessing.py\nSVR Model.py\nRandom Forest Model.py\nDeploy ML.py\nTraceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n",
+  "history_begin_time" : 1641215987575,
+  "history_end_time" : 1641215992980,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "t5g55h",
+  "indicator" : "Done"
+},{
+  "history_id" : "91dklkg64fw",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1639374646708,
+  "history_end_time" : 1639374647181,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "0l999740jwm",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1639373549881,
+  "history_end_time" : 1639373550709,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "srwsrpk1jx3",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\nemissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1639372890797,
+  "history_end_time" : 1639372891951,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5dub4dyj56v",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1639372511516,
+  "history_end_time" : 1639372512791,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z89zmwg8kky",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345540886,
+  "history_end_time" : 1639345541060,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mglgv5igxh1",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345433540,
+  "history_end_time" : 1639345433742,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ciwct7vquad",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345391136,
+  "history_end_time" : 1639345391207,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "d50jg9tkx98",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345252183,
+  "history_end_time" : 1639345252197,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o5a7z35czyl",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639344889376,
+  "history_end_time" : 1639344889415,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "1xyyrwotsg4",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639326038565,
+  "history_end_time" : 1639326038715,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rgrspnfst8j",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325965101,
+  "history_end_time" : 1639325965136,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rdl4kq1imil",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325947796,
+  "history_end_time" : 1639325947855,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "r8fenyxr3is",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324414692,
+  "history_end_time" : 1639324414870,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9m57pobkn1w",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324281463,
+  "history_end_time" : 1639324281610,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7g397gg6hkh",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324208578,
+  "history_end_time" : 1639324208712,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3jo7r6c2h6e",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324154626,
+  "history_end_time" : 1639324154795,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kwv8y7qly6d",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639282292826,
+  "history_end_time" : 1639282292985,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dqn5nmabv4o",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639281626812,
+  "history_end_time" : 1639281627004,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4qnqfskrg67",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639280122765,
+  "history_end_time" : 1639280122814,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "gty3fhmf7u2",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000047                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636386554641,
+  "history_end_time" : 1636386555110,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kb6czejy0e0",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000047                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636145195406,
+  "history_end_time" : 1636145195819,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y26jhtxg3pl",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000047                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636062891404,
+  "history_end_time" : 1636062891852,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c08em1gu69c",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000047                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636062724839,
+  "history_end_time" : 1636062725302,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qdtz5r1u5e5",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000047                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636062663411,
+  "history_end_time" : 1636062663906,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6pbk8wjfswo",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636062369703,
+  "history_end_time" : 1636062370182,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "duix1z6yxa3",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636062271665,
+  "history_end_time" : 1636062272173,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "a2vvdq13q6e",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636052895856,
+  "history_end_time" : 1636052896288,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0n1fjpxbkf4",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID    Latitude  ...  Temp (Monthly)  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  167.000000  ...      167.000000        167.000000                167.000000\nmean     83.00000   56.0   31.488019  ...      292.725567          0.000052                  0.509011\nstd      48.35287    0.0    0.000000  ...        7.072844          0.000026                  0.048822\nmin       0.00000   56.0   31.488019  ...      281.632294          0.000004                  0.359887\n25%      41.50000   56.0   31.488019  ...      284.216461          0.000047                  0.486571\n50%      83.00000   56.0   31.488019  ...      294.809784          0.000047                  0.525576\n75%     124.50000   56.0   31.488019  ...      299.535797          0.000074                  0.526714\nmax     166.00000   56.0   31.488019  ...      301.860596          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636043257333,
+  "history_end_time" : 1636043257800,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nsn9r0k81pb",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636037957475,
+  "history_end_time" : 1636037957912,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "5ed4vq1z4yk",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636037742544,
+  "history_end_time" : 1636037742966,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "7c64d4461ae",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037697321,
+  "history_end_time" : 1636037697753,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b605xadcrw0",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037529140,
+  "history_end_time" : 1636037529587,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qs45wxc29bz",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037155934,
+  "history_end_time" : 1636037156394,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "clhjp8sao8r",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037115789,
+  "history_end_time" : 1636037116223,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k64gon8z7rl",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID  ...  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  ...        167.000000                167.000000\nmean     83.00000   56.0  ...          0.000052                  0.509011\nstd      48.35287    0.0  ...          0.000026                  0.048822\nmin       0.00000   56.0  ...          0.000004                  0.359887\n25%      41.50000   56.0  ...          0.000046                  0.486571\n50%      83.00000   56.0  ...          0.000047                  0.525576\n75%     124.50000   56.0  ...          0.000074                  0.526714\nmax     166.00000   56.0  ...          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex(['Unnamed: 0', 'FID', 'Latitude', 'Longitude', 'Date', 'EPA_NO2/100000',\n       'TROPOMI*1000', 'Wind (Monthly)', 'Temp (Monthly)', 'Precip (Monthly)',\n       'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636036977706,
+  "history_end_time" : 1636036978156,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "a0x8dzlra17",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036821613,
+  "history_end_time" : 1636036822077,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8g3eahgk4b8",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036572444,
+  "history_end_time" : 1636036572902,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ry5zvgl2e3g",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036490403,
+  "history_end_time" : 1636036490860,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qgp8ayr160v",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID    Latitude   Longitude  ...  Wind (Monthly)  Temp (Monthly)  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  167.000000  167.000000  ...      167.000000      167.000000        167.000000                167.000000\nmean     83.00000   56.0   31.488019  -87.910747  ...        3.871367      292.725567          0.000052                  0.509011\nstd      48.35287    0.0    0.000000    0.000000  ...        0.367921        7.072844          0.000026                  0.048822\nmin       0.00000   56.0   31.488019  -87.910747  ...        3.383229      281.632294          0.000004                  0.359887\n25%      41.50000   56.0   31.488019  -87.910747  ...        3.605924      284.216461          0.000047                  0.486571\n50%      83.00000   56.0   31.488019  -87.910747  ...        3.678730      294.809784          0.000047                  0.525576\n75%     124.50000   56.0   31.488019  -87.910747  ...        4.234426      299.535797          0.000074                  0.526714\nmax     166.00000   56.0   31.488019  -87.910747  ...        4.602291      301.860596          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636036413692,
+  "history_end_time" : 1636036414114,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jwk3devu2o2",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036325044,
+  "history_end_time" : 1636036325510,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e53vo9s5f58",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036303266,
+  "history_end_time" : 1636036303726,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "p98630orj6m",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "==================>\nDescribe data\n       Unnamed: 0    FID    Latitude   Longitude  ...  Wind (Monthly)  Temp (Monthly)  Precip (Monthly)  Cloud Fraction (Monthly)\ncount   167.00000  167.0  167.000000  167.000000  ...      167.000000      167.000000        167.000000                167.000000\nmean     83.00000   56.0   31.488019  -87.910747  ...        3.871367      292.725567          0.000052                  0.509011\nstd      48.35287    0.0    0.000000    0.000000  ...        0.367921        7.072844          0.000026                  0.048822\nmin       0.00000   56.0   31.488019  -87.910747  ...        3.383229      281.632294          0.000004                  0.359887\n25%      41.50000   56.0   31.488019  -87.910747  ...        3.605924      284.216461          0.000047                  0.486571\n50%      83.00000   56.0   31.488019  -87.910747  ...        3.678730      294.809784          0.000047                  0.525576\n75%     124.50000   56.0   31.488019  -87.910747  ...        4.234426      299.535797          0.000074                  0.526714\nmax     166.00000   56.0   31.488019  -87.910747  ...        4.602291      301.860596          0.000098                  0.691063\n[8 rows x 10 columns]\n==================>\n==================>\nCheck shape of data\n(167, 11)\n==================>\n==================>\nCheck available columns\nIndex([u'Unnamed: 0', u'FID', u'Latitude', u'Longitude', u'Date',\n       u'EPA_NO2/100000', u'TROPOMI*1000', u'Wind (Monthly)',\n       u'Temp (Monthly)', u'Precip (Monthly)', u'Cloud Fraction (Monthly)'],\n      dtype='object')\n==================>\n==================>\nAny NULL values in features?\nUnnamed: 0                  0\nFID                         0\nLatitude                    0\nLongitude                   0\nDate                        0\nEPA_NO2/100000              0\nTROPOMI*1000                0\nWind (Monthly)              0\nTemp (Monthly)              0\nPrecip (Monthly)            0\nCloud Fraction (Monthly)    0\ndtype: int64\n==================>\n",
+  "history_begin_time" : 1636036260621,
+  "history_end_time" : 1636036261068,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ty1hboravw9",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036129039,
+  "history_end_time" : 1636036129411,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m6yrmyf0w8b",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036083281,
+  "history_end_time" : 1636036083678,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hngys789kyg",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036020597,
+  "history_end_time" : 1636036020990,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s0hszse1ve0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1636035959525,
+  "history_end_time" : 1636035959539,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "is6knjbfxys",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636035825783,
+  "history_end_time" : 1636035826181,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b1ildmhz27e",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034985242,
+  "history_end_time" : 1636034985796,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "twtb70eghxm",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034771038,
+  "history_end_time" : 1636034771410,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dy5xogrgo90",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034551886,
+  "history_end_time" : 1636034552273,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oo0g3neijvu",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034393241,
+  "history_end_time" : 1636034393573,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zz0pwx2h02w",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034359184,
+  "history_end_time" : 1636034359517,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kbtd4l9t1rf",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033771915,
+  "history_end_time" : 1636033771939,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1hgxhn35rj1",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033713640,
+  "history_end_time" : 1636033713667,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oz2i1cqv7tv",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"ExploreDataProperties.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033712751,
+  "history_end_time" : 1636033712776,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ghp9xxgarxp",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1635988621188,
+  "history_end_time" : 1635988621654,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "qdni2j5r8mj",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\nprint(\"==================>\")\nprint(\"Describe data\")\nprint(emissions.describe())\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check shape of data\")\nprint(emissions.shape)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Check available columns\")\nprint(emissions.columns)\nprint(\"==================>\")\nprint(\"==================>\")\nprint(\"Any NULL values in features?\")\nprint(emissions.isnull().sum())\nprint(\"==================>\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1635887056302,
+  "history_end_time" : 1635887057112,
+  "history_notes" : null,
+  "history_process" : "nj80ks",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},]

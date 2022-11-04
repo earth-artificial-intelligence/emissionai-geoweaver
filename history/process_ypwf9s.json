@@ -1,0 +1,761 @@
+[{
+  "history_id" : "cqaj50h4ttp",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1651521834012,
+  "history_end_time" : 1651521835046,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0v5hv5b6mvt",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1649179881911,
+  "history_end_time" : 1649179882551,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2vo5vagjvs2",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1643666955297,
+  "history_end_time" : 1643666955316,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "yrnvl7qy7of",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1643125048261,
+  "history_end_time" : 1643125048643,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w3fuvf64kw6",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642966287782,
+  "history_end_time" : 1642966287814,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "fk8f4of2gf5",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642958112686,
+  "history_end_time" : 1642958112732,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7v3xegzbogb",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "  File \"Data Preprocessing.py\", line 7\n    regression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n                                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642316563720,
+  "history_end_time" : 1642316564068,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hryi5ev1smu",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642233099657,
+  "history_end_time" : 1642233100288,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1y1tfiuzmm9",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642233050654,
+  "history_end_time" : 1642233051173,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u0exk14ciiw",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642230160649,
+  "history_end_time" : 1642230161144,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "d157thwbogx",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642230116869,
+  "history_end_time" : 1642230117421,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rbbadbwgii4",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642229597399,
+  "history_end_time" : 1642229597904,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4bm0jgmz3ux",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642227724692,
+  "history_end_time" : 1642227725675,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b70coarqnvv",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "  File \"Data Preprocessing.py\", line 7\n    regression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n                                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642226786359,
+  "history_end_time" : 1642226786576,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "45eiezkapoq",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642116749083,
+  "history_end_time" : 1642116749912,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ah8omwvauki",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642116683827,
+  "history_end_time" : 1642116683934,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o5td8bkjf8c",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1642022964408,
+  "history_end_time" : 1642022965213,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zw4vb3hx32c",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "  File \"Data Preprocessing.py\", line 7\n    regression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n                                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642022909750,
+  "history_end_time" : 1642022909895,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s7vttphza0o",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "loop.py\nGetEmissionsData.py\nExploreDataProperties.py\nVisualizeFeatures.py\nDeepLearning_NN.py\nTrainModel_LSTM.py\ntest1.py\nData Preprocessing.py\nSVR Model.py\nRandom Forest Model.py\nDeploy ML.py\npython: can't open file 'Data': [Errno 2] No such file or directory\n",
+  "history_begin_time" : 1641215999006,
+  "history_end_time" : 1641216004224,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "t5g55h",
+  "indicator" : "Done"
+},{
+  "history_id" : "y8i61llu1qz",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1639374653215,
+  "history_end_time" : 1639374653758,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "96zbz4u7dme",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1639373556754,
+  "history_end_time" : 1639373557508,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "puc5z29b9j7",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\n\nregression_emissions = pd.read_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv(f'{home}/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1639372898009,
+  "history_end_time" : 1639372898985,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kcdl1asdt5o",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1639372540904,
+  "history_end_time" : 1639372541801,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "87isva4gdvc",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345544122,
+  "history_end_time" : 1639345544287,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bt0pt5uz9ak",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345436839,
+  "history_end_time" : 1639345437012,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ftd8bn5ubct",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345393247,
+  "history_end_time" : 1639345393321,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rt5yb44p2t0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345253210,
+  "history_end_time" : 1639345253246,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "czi3wckezoe",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639344891441,
+  "history_end_time" : 1639344891474,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "qvufv30pndo",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639326041787,
+  "history_end_time" : 1639326041922,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "f3e7zml30z0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325967177,
+  "history_end_time" : 1639325967232,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "a2opwszxzl6",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325949893,
+  "history_end_time" : 1639325949940,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wbbwfqqoyi6",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324417926,
+  "history_end_time" : 1639324418069,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6s7aiv21q07",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324284640,
+  "history_end_time" : 1639324284813,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "muwgyxmthz2",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324211750,
+  "history_end_time" : 1639324211893,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kj5xmn8kgkc",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324157843,
+  "history_end_time" : 1639324158002,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gndl4neppcm",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639282297056,
+  "history_end_time" : 1639282297168,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2sviosjiccy",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639281630079,
+  "history_end_time" : 1639281630249,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wme5qlxrg5g",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639280123849,
+  "history_end_time" : 1639280123904,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wg3cl198r48",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636386561124,
+  "history_end_time" : 1636386561501,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e8kzthhj2yw",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636145201835,
+  "history_end_time" : 1636145202245,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "p8j1ckcopsz",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636062895868,
+  "history_end_time" : 1636062896264,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0vd89dhjpdw",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636062729322,
+  "history_end_time" : 1636062729714,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xtedg7ptw5n",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636062667937,
+  "history_end_time" : 1636062668342,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hxpewr3rrmg",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636062375207,
+  "history_end_time" : 1636062375643,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "u2eujjl5rdb",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636062278199,
+  "history_end_time" : 1636062278615,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "lw33arcud1z",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636052898303,
+  "history_end_time" : 1636052898684,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o1q072i1mkb",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636043259810,
+  "history_end_time" : 1636043260189,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3v2ntytgrjr",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636037960931,
+  "history_end_time" : 1636037961377,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "xj2f2x3zj4w",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636037746002,
+  "history_end_time" : 1636037746410,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "oj10yeol65k",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037699762,
+  "history_end_time" : 1636037700139,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s5gu61n79k8",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037531596,
+  "history_end_time" : 1636037532006,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6kk07hd5lnb",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037158404,
+  "history_end_time" : 1636037158782,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "14m826jfwq6",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037118234,
+  "history_end_time" : 1636037118625,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xubcgqzinah",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036982172,
+  "history_end_time" : 1636036982636,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "4mv11dripp5",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036824088,
+  "history_end_time" : 1636036824475,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qo66s0uzzdq",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036574913,
+  "history_end_time" : 1636036575286,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bc09c2rus5s",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036493872,
+  "history_end_time" : 1636036494245,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "evo7bcn18oj",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036416123,
+  "history_end_time" : 1636036416502,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kfiq9mjo2ho",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036327523,
+  "history_end_time" : 1636036327900,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q2o9sisxwdh",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036305739,
+  "history_end_time" : 1636036306121,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ywusvw07zok",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036263078,
+  "history_end_time" : 1636036263501,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wsvj0fdd8si",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036131425,
+  "history_end_time" : 1636036131820,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8463nec740l",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036085693,
+  "history_end_time" : 1636036086069,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qtuyuozp2gh",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036023006,
+  "history_end_time" : 1636036023386,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u9npenqv21v",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1636035960549,
+  "history_end_time" : 1636035960562,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "e5cujqmrji1",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636035828208,
+  "history_end_time" : 1636035828622,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0zlklhzsih6",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "",
+  "history_begin_time" : 1636034989831,
+  "history_end_time" : 1636034990300,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "22gb9mn8lyx",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034772422,
+  "history_end_time" : 1636034772801,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6s2jkd3gzwv",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034554791,
+  "history_end_time" : 1636034555170,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b8wwy8f9f7p",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034394587,
+  "history_end_time" : 1636034394910,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kccinl4c59k",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034360531,
+  "history_end_time" : 1636034360883,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z8v7cykxa88",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033772966,
+  "history_end_time" : 1636033772991,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rb780otzil0",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033714798,
+  "history_end_time" : 1636033714825,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jx522d5kxum",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Traceback (most recent call last):\n  File \"Data Preprocessing.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033714708,
+  "history_end_time" : 1636033714733,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ufs07uwwhnx",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1635988624678,
+  "history_end_time" : 1635988625151,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "8d5vee0fez9",
+  "history_input" : "import pandas as pd\n\n\n\nregression_emissions = pd.read_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\",parse_dates=[\"Date\"])\n\nregression_emissions['dayofyear'] = regression_emissions['Date'].dt.dayofyear\nregression_emissions['dayofweek'] = regression_emissions['Date'].dt.dayofweek\nregression_emissions['dayofmonth'] = regression_emissions['Date'].dt.day\nregression_emissions = regression_emissions.drop(columns=[\"Date\"])\n\n\nregression_emissions.to_csv('~/geoweaver_demo/preprocessed.csv')",
+  "history_output" : "Running",
+  "history_begin_time" : 1635887061126,
+  "history_end_time" : 1635887061657,
+  "history_notes" : null,
+  "history_process" : "ypwf9s",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},]

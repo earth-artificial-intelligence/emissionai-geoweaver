@@ -1,0 +1,11 @@
+[{
+  "history_id" : "hhfsfcuriet",
+  "history_input" : "import json\nimport pandas as pd\nimport ee\n\ntry:\n    ee.Initialize()\nexcept Exception as e:\n    ee.Authenticate()\n    ee.Initialize()\n\n# identify a 500 meter buffer around our Point Of Interest (POI)\npoi = ee.Geometry.Point(-87.910747, 31.488019).buffer(500)\n\nGet TROPOMI NRTI Image Collection for GoogleEarth Engine\ntropomiCollection = ee.ImageCollection(\"COPERNICUS/S5P\n/NRTI/L3_NO2\").filterDate('2019-01-01','2019-03-31')\n\ndef poi_mean(img):\n    # This function will reduce all the points in the area we specifed in \"poi\" \n    and average all the data into a single daily value\n    mean = img.reduceRegion(reducer=ee.Reducer.mean(), \n    geometry=poi,scale=250).get('tropospheric_NO2_column_number_density')\n    return img.set('date', img.date().format()).set('mean',mean)\n    \n# Map function to our ImageCollection\npoi_reduced_imgs = tropomiCollection.map(poi_mean)\nnested_list = poi_reduced_imgs.reduceColumns(ee.Reducer.toList(2)['date','mean']).values().get(0)\n\n# we need to call the callback method \"getInfo\" to retrieve the data\ndf = pd.DataFrame(nested_list.getInfo(), columns=['date','tropomi_no2_mean'])\ndf['date'] = pd.to_datetime(df['date'])\ndf = df.set_index('date')\n\t# Scaling the data to later match our target feature scale\ndf['tropomi_no2_mean'] = df['tropomi_no2_mean']*1000\n# Save data to CSV file\ndf.to_csv('tropomi_no2.csv')\n\n",
+  "history_output" : "  File \"data_tropomi_extraction.py\", line 14\n    Get TROPOMI NRTI Image Collection for GoogleEarth Engine\n        ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1651521746742,
+  "history_end_time" : 1651521747702,
+  "history_notes" : null,
+  "history_process" : "wji81a",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

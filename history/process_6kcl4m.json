@@ -1,0 +1,11 @@
+[{
+  "history_id" : "jl2bpa16qcm",
+  "history_input" : "import json\nimport pandas as pd\nimport ee\n\ntry:\n    ee.Initialize()\nexcept Exception as e:\n    ee.Authenticate()\n    ee.Initialize()\n\n# identify a 500 meter buffer around our Point Of Interest (POI)\npoi = ee.Geometry.Point(-87.910747, 31.488019).buffer(500)\n\nmcd19a2 = ee.ImageCollection(\"MODIS/006/MCD19A2_GRANULES\").filterDate('2019-01-01','2019-03-31')\ndef poi_mean(img):\n    mean = img.reduceRegion(reducer=ee.Reducer.mean(), geometry=poi, scale=250).get('Optical_Depth_047')\n    return img.set('date', img.date().format()).set('mean',mean)\n\n    \n# Map function to our ImageCollection\npoi_reduced_imgs = tropomiCollection.map(poi_mean)\nnested_list = poi_reduced_imgs.reduceColumns(ee.Reducer.toList(2)['date','mean']).values().get(0)\n\n# we need to call the callback method \"getInfo\" to retrieve the data\ndf = pd.DataFrame(nested_list.getInfo(), columns=['date','tropomi_no2_mean'])\ndf['date'] = pd.to_datetime(df['date'])\ndf = df.set_index('date')\n\t# Scaling the data to later match our target feature scale\ndf['tropomi_no2_mean'] = df['tropomi_no2_mean']*1000\n# Save data to CSV file\ndf.to_csv('tropomi_no2.csv')\n\n",
+  "history_output" : "",
+  "history_begin_time" : 1651521746742,
+  "history_end_time" : 1651521747716,
+  "history_notes" : null,
+  "history_process" : "6kcl4m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

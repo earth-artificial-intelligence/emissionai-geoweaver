@@ -1,0 +1,901 @@
+[{
+  "history_id" : "1mybd3bizx0",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1651521822976,
+  "history_end_time" : 1651521824461,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8dkus4c0s43",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1649179858097,
+  "history_end_time" : 1649179871608,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "SgE1DecpMLVe",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  sleep(5)\n  print(i)\n  \n  ",
+  "history_output" : "",
+  "history_begin_time" : 1645156626636,
+  "history_end_time" : 1645156634665,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "5GORR4UM6UvN",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  sleep(5)\n  print(i)\n  \n  ",
+  "history_output" : "",
+  "history_begin_time" : 1645156504603,
+  "history_end_time" : 1645156515648,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "edsJzFpPgVd4",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  sleep(5)\n  print(i)\n  \n  ",
+  "history_output" : "",
+  "history_begin_time" : 1645156488215,
+  "history_end_time" : 1645156491098,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "JjU4X7gMdzfH",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)\n  \n  ",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1645156455467,
+  "history_end_time" : 1645156459413,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Stopped"
+},{
+  "history_id" : "LTvMgb9MSFwW",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644526273835,
+  "history_end_time" : 1644526274428,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "FjOT5Rj9dLpK",
+  "history_input" : "import subprocess\nimport sys\nfrom time import sleep\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)\n  sleep(3)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644526246796,
+  "history_end_time" : 1644526262438,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "HJxT0z5LTKAr",
+  "history_input" : "import subprocess\nimport sys\nimport time\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)\n  time.sleep(3)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644526202870,
+  "history_end_time" : 1644526218518,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "WICSrRXUGcAd",
+  "history_input" : "import subprocess\nimport sys\nimport time\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)\n  time.sleep(3)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644526173497,
+  "history_end_time" : 1644526189527,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "69sbUiL492yo",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644526149641,
+  "history_end_time" : 1644526150435,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "Y4UQbVcpYhWz",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)\n  print('Done')",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\nDone\n1\nDone\n2\nDone\n3\nDone\n4\nDone\n",
+  "history_begin_time" : 1644526100120,
+  "history_end_time" : 1644526101495,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "TqKX5wHgEKdY",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644422345001,
+  "history_end_time" : 1644422345573,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "XRKKVXiVKMoc",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644422309221,
+  "history_end_time" : 1644422309836,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "5RNzTBDPCMGG",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nfor i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n0\n1\n2\n3\n4\n",
+  "history_begin_time" : 1644422296800,
+  "history_end_time" : 1644422297429,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "AsYrsbFccGz9",
+  "history_input" : "import subprocess\nimport sys\n\ntry:\n    import pandas as pd\nexcept ImportError:\n\tsubprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", 'pandas'])\nfinally:\n    import pandas as pd\n\n\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/tropomi_epa_kvps_NO2_2019_56.csv\")\n\nif i in range(5):\n  print(i)",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\nTraceback (most recent call last):\n  File \"GetEmissionsData.py\", line 16, in <module>\n    if i in range(5):\nNameError: name 'i' is not defined\n",
+  "history_begin_time" : 1644422265082,
+  "history_end_time" : 1644422273420,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "c6xi2ijssbw",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1643666953104,
+  "history_end_time" : 1643666953925,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zedv45whx3c",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1643125039951,
+  "history_end_time" : 1643125041000,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nwymqqj29ok",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642966285720,
+  "history_end_time" : 1642966285789,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "etltd2m3dwm",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642958110572,
+  "history_end_time" : 1642958110620,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "g3vfdsrvq73",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "  File \"GetEmissionsData.py\", line 7\n    demo_dir = f\"{home}/geoweaver_demo/\"\n                                       ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642316558396,
+  "history_end_time" : 1642316559051,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ei3evy526cj",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642233085482,
+  "history_end_time" : 1642233089876,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9soby9r4yxt",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642233037821,
+  "history_end_time" : 1642233043885,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "skbttwhktoa",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642230152771,
+  "history_end_time" : 1642230153336,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "20apvqrgsfb",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642230109256,
+  "history_end_time" : 1642230110072,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u8yojubx2m7",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642229589166,
+  "history_end_time" : 1642229589904,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1zl5p9b62r9",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642227694595,
+  "history_end_time" : 1642227704231,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0rjsocbc3dq",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "  File \"GetEmissionsData.py\", line 7\n    demo_dir = f\"{home}/geoweaver_demo/\"\n                                       ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642226781006,
+  "history_end_time" : 1642226781397,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "62ejlb7g35q",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642116721120,
+  "history_end_time" : 1642116730103,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cey3tylcaoj",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642116680654,
+  "history_end_time" : 1642116680748,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "syf8nnevut8",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1642022936031,
+  "history_end_time" : 1642022943758,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c4rds6ou5sy",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "  File \"GetEmissionsData.py\", line 7\n    demo_dir = f\"{home}/geoweaver_demo/\"\n                                       ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642022902479,
+  "history_end_time" : 1642022903487,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dggamq8wuos",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "loop.py\nGetEmissionsData.py\nExploreDataProperties.py\nVisualizeFeatures.py\nDeepLearning_NN.py\nTrainModel_LSTM.py\ntest1.py\nData Preprocessing.py\nSVR Model.py\nRandom Forest Model.py\nDeploy ML.py\nTraceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n",
+  "history_begin_time" : 1641215980553,
+  "history_end_time" : 1641215987044,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "t5g55h",
+  "indicator" : "Done"
+},{
+  "history_id" : "49phg4ht38p",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1639374643700,
+  "history_end_time" : 1639374645385,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "d6jqj43tzqe",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1639373547016,
+  "history_end_time" : 1639373548561,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qwhuzrmuc7f",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1639372868076,
+  "history_end_time" : 1639372889336,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rtac81el7uh",
+  "history_input" : "import pandas as pd\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\ndemo_dir = f\"{home}/geoweaver_demo/\"\nif not os.path.exists(demo_dir):\n\tos.mkdir(demo_dir)\nemissions.to_csv(f\"{home}/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1639372507524,
+  "history_end_time" : 1639372509459,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r24qq53xxvq",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345538883,
+  "history_end_time" : 1639345539101,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8hqljrst349",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345432598,
+  "history_end_time" : 1639345432878,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7hv8327buz9",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345390130,
+  "history_end_time" : 1639345390195,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "bg1krr7hd0w",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345251155,
+  "history_end_time" : 1639345251203,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "a07nfe7d2ms",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639344888363,
+  "history_end_time" : 1639344888399,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "p7alm12ulsi",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639326036553,
+  "history_end_time" : 1639326036819,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "044d9b9n0vk",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325964070,
+  "history_end_time" : 1639325964117,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "qhqf1ht9fst",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325946722,
+  "history_end_time" : 1639325946781,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0b31t22it7k",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324413206,
+  "history_end_time" : 1639324413348,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ykmwtum21bw",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324279883,
+  "history_end_time" : 1639324280023,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zk6g4soqqh2",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324206871,
+  "history_end_time" : 1639324207022,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tkgeazwcrwa",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324153830,
+  "history_end_time" : 1639324154133,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ze7vk7r555y",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639282291826,
+  "history_end_time" : 1639282291994,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3wd1jujnkgm",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639281622801,
+  "history_end_time" : 1639281626141,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "96o2ht8mjpx",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639280121762,
+  "history_end_time" : 1639280121851,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7ubr74i6sld",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636386549927,
+  "history_end_time" : 1636386553410,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ryd2v5q1p4v",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636145192064,
+  "history_end_time" : 1636145193687,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zehecbfqzua",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636062888673,
+  "history_end_time" : 1636062890117,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dqt74dmxawn",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636062722557,
+  "history_end_time" : 1636062723053,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gw5qmg3bzl5",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636062661410,
+  "history_end_time" : 1636062662059,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2kmcni8lqjo",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636062367754,
+  "history_end_time" : 1636062368628,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "kp5ukbvxac6",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1636062268654,
+  "history_end_time" : 1636062270032,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "85jd34ksvv4",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636052895026,
+  "history_end_time" : 1636052895617,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bhfrdjrq179",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636043256376,
+  "history_end_time" : 1636043257123,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dzdnn6delsy",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037955979,
+  "history_end_time" : 1636037957244,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "rllx8hg7yg6",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037740516,
+  "history_end_time" : 1636037742087,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "4nyiflxvyiw",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037696663,
+  "history_end_time" : 1636037697156,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5fgd5r7kp42",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037527627,
+  "history_end_time" : 1636037528184,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oi1o5syrh8m",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037154808,
+  "history_end_time" : 1636037155307,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "v2p46jh02wc",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037114995,
+  "history_end_time" : 1636037115544,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5of9upskcwl",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036975484,
+  "history_end_time" : 1636036976840,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "nqa1ka4u5j7",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036821055,
+  "history_end_time" : 1636036821567,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r78xtn9s4ez",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036571341,
+  "history_end_time" : 1636036571830,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7opdev5skf5",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036489220,
+  "history_end_time" : 1636036489787,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "la9lsmfypye",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036412907,
+  "history_end_time" : 1636036413410,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "loabssf9rw4",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036323705,
+  "history_end_time" : 1636036324204,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3fz578txy3g",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036302609,
+  "history_end_time" : 1636036303112,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8dnfro1gd5b",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036259551,
+  "history_end_time" : 1636036260056,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bs1hctzgl4k",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036128367,
+  "history_end_time" : 1636036128968,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b46jfimfd7f",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  Longitude       Date  ...  Wind (Monthly)  Temp (Monthly)  Precip (Monthly)  Cloud Fraction (Monthly)\n0     56  31.488019 -87.910747 2019-01-16  ...        4.234426      281.632294          0.000053                  0.470510\n1     56  31.488019 -87.910747 2019-01-17  ...        4.234426      281.632294          0.000053                  0.470510\n2     56  31.488019 -87.910747 2019-01-18  ...        4.234426      281.632294          0.000053                  0.470510\n3     56  31.488019 -87.910747 2019-01-19  ...        4.234426      281.632294          0.000053                  0.470510\n4     56  31.488019 -87.910747 2019-01-20  ...        4.234426      281.632294          0.000053                  0.470510\n5     56  31.488019 -87.910747 2019-01-21  ...        4.234426      281.632294          0.000053                  0.470510\n6     56  31.488019 -87.910747 2019-01-22  ...        4.234426      281.632294          0.000053                  0.470510\n7     56  31.488019 -87.910747 2019-01-23  ...        4.234426      281.632294          0.000053                  0.470510\n8     56  31.488019 -87.910747 2019-01-24  ...        4.234426      281.632294          0.000053                  0.470510\n9     56  31.488019 -87.910747 2019-01-25  ...        4.234426      281.632294          0.000053                  0.470510\n10    56  31.488019 -87.910747 2019-01-26  ...        4.234426      281.632294          0.000053                  0.470510\n11    56  31.488019 -87.910747 2019-01-27  ...        4.234426      281.632294          0.000053                  0.470510\n12    56  31.488019 -87.910747 2019-01-28  ...        4.234426      281.632294          0.000053                  0.470510\n13    56  31.488019 -87.910747 2019-01-29  ...        4.234426      281.632294          0.000053                  0.470510\n14    56  31.488019 -87.910747 2019-01-30  ...        4.234426      281.632294          0.000053                  0.470510\n15    56  31.488019 -87.910747 2019-01-31  ...        4.234426      281.632294          0.000053                  0.470510\n16    56  31.488019 -87.910747 2019-02-01  ...        4.602291      287.666107          0.000048                  0.691063\n17    56  31.488019 -87.910747 2019-02-02  ...        4.602291      287.666107          0.000048                  0.691063\n18    56  31.488019 -87.910747 2019-02-03  ...        4.602291      287.666107          0.000048                  0.691063\n19    56  31.488019 -87.910747 2019-03-04  ...        4.449878      286.605103          0.000029                  0.541629\n20    56  31.488019 -87.910747 2019-03-05  ...        4.449878      286.605103          0.000029                  0.541629\n21    56  31.488019 -87.910747 2019-03-06  ...        4.449878      286.605103          0.000029                  0.541629\n22    56  31.488019 -87.910747 2019-03-07  ...        4.449878      286.605103          0.000029                  0.541629\n23    56  31.488019 -87.910747 2019-03-08  ...        4.449878      286.605103          0.000029                  0.541629\n24    56  31.488019 -87.910747 2019-03-27  ...        4.449878      286.605103          0.000029                  0.541629\n25    56  31.488019 -87.910747 2019-03-28  ...        4.449878      286.605103          0.000029                  0.541629\n26    56  31.488019 -87.910747 2019-03-29  ...        4.449878      286.605103          0.000029                  0.541629\n27    56  31.488019 -87.910747 2019-03-30  ...        4.449878      286.605103          0.000029                  0.541629\n28    56  31.488019 -87.910747 2019-03-31  ...        4.449878      286.605103          0.000029                  0.541629\n29    56  31.488019 -87.910747 2019-04-01  ...        4.353224      290.878571          0.000074                  0.486571\n..   ...        ...        ...        ...  ...             ...             ...               ...                       ...\n137   56  31.488019 -87.910747 2019-10-30  ...        3.678730      294.809784          0.000098                  0.524421\n138   56  31.488019 -87.910747 2019-10-31  ...        3.678730      294.809784          0.000098                  0.524421\n139   56  31.488019 -87.910747 2019-11-01  ...        4.009240      283.916229          0.000020                  0.525576\n140   56  31.488019 -87.910747 2019-11-02  ...        4.009240      283.916229          0.000020                  0.525576\n141   56  31.488019 -87.910747 2019-11-03  ...        4.009240      283.916229          0.000020                  0.525576\n142   56  31.488019 -87.910747 2019-11-04  ...        4.009240      283.916229          0.000020                  0.525576\n143   56  31.488019 -87.910747 2019-11-05  ...        4.009240      283.916229          0.000020                  0.525576\n144   56  31.488019 -87.910747 2019-11-06  ...        4.009240      283.916229          0.000020                  0.525576\n145   56  31.488019 -87.910747 2019-11-07  ...        4.009240      283.916229          0.000020                  0.525576\n146   56  31.488019 -87.910747 2019-11-09  ...        4.009240      283.916229          0.000020                  0.525576\n147   56  31.488019 -87.910747 2019-11-10  ...        4.009240      283.916229          0.000020                  0.525576\n148   56  31.488019 -87.910747 2019-11-11  ...        4.009240      283.916229          0.000020                  0.525576\n149   56  31.488019 -87.910747 2019-11-12  ...        4.009240      283.916229          0.000020                  0.525576\n150   56  31.488019 -87.910747 2019-11-13  ...        4.009240      283.916229          0.000020                  0.525576\n151   56  31.488019 -87.910747 2019-11-15  ...        4.009240      283.916229          0.000020                  0.525576\n152   56  31.488019 -87.910747 2019-11-16  ...        4.009240      283.916229          0.000020                  0.525576\n153   56  31.488019 -87.910747 2019-11-17  ...        4.009240      283.916229          0.000020                  0.525576\n154   56  31.488019 -87.910747 2019-11-18  ...        4.009240      283.916229          0.000020                  0.525576\n155   56  31.488019 -87.910747 2019-11-19  ...        4.009240      283.916229          0.000020                  0.525576\n156   56  31.488019 -87.910747 2019-11-20  ...        4.009240      283.916229          0.000020                  0.525576\n157   56  31.488019 -87.910747 2019-11-22  ...        4.009240      283.916229          0.000020                  0.525576\n158   56  31.488019 -87.910747 2019-11-23  ...        4.009240      283.916229          0.000020                  0.525576\n159   56  31.488019 -87.910747 2019-11-24  ...        4.009240      283.916229          0.000020                  0.525576\n160   56  31.488019 -87.910747 2019-11-25  ...        4.009240      283.916229          0.000020                  0.525576\n161   56  31.488019 -87.910747 2019-11-26  ...        4.009240      283.916229          0.000020                  0.525576\n162   56  31.488019 -87.910747 2019-12-01  ...        4.421877      284.216461          0.000052                  0.548777\n163   56  31.488019 -87.910747 2019-12-02  ...        4.421877      284.216461          0.000052                  0.548777\n164   56  31.488019 -87.910747 2019-12-03  ...        4.421877      284.216461          0.000052                  0.548777\n165   56  31.488019 -87.910747 2019-12-04  ...        4.421877      284.216461          0.000052                  0.548777\n166   56  31.488019 -87.910747 2019-12-05  ...        4.421877      284.216461          0.000052                  0.548777\n[167 rows x 10 columns]\nTraceback (most recent call last):\n  File \"GetEmissionsData.py\", line 4, in <module>\n    emissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/core/generic.py\", line 3020, in to_csv\n    formatter.save()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/formats/csvs.py\", line 157, in save\n    compression=self.compression)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/common.py\", line 421, in _get_handle\n    f = open(path_or_buf, mode)\nIOError: [Errno 2] No such file or directory: '/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv'\n",
+  "history_begin_time" : 1636036082170,
+  "history_end_time" : 1636036082651,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "iojjn9mzyt7",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  Longitude       Date  ...  Wind (Monthly)  Temp (Monthly)  Precip (Monthly)  Cloud Fraction (Monthly)\n0     56  31.488019 -87.910747 2019-01-16  ...        4.234426      281.632294          0.000053                  0.470510\n1     56  31.488019 -87.910747 2019-01-17  ...        4.234426      281.632294          0.000053                  0.470510\n2     56  31.488019 -87.910747 2019-01-18  ...        4.234426      281.632294          0.000053                  0.470510\n3     56  31.488019 -87.910747 2019-01-19  ...        4.234426      281.632294          0.000053                  0.470510\n4     56  31.488019 -87.910747 2019-01-20  ...        4.234426      281.632294          0.000053                  0.470510\n5     56  31.488019 -87.910747 2019-01-21  ...        4.234426      281.632294          0.000053                  0.470510\n6     56  31.488019 -87.910747 2019-01-22  ...        4.234426      281.632294          0.000053                  0.470510\n7     56  31.488019 -87.910747 2019-01-23  ...        4.234426      281.632294          0.000053                  0.470510\n8     56  31.488019 -87.910747 2019-01-24  ...        4.234426      281.632294          0.000053                  0.470510\n9     56  31.488019 -87.910747 2019-01-25  ...        4.234426      281.632294          0.000053                  0.470510\n10    56  31.488019 -87.910747 2019-01-26  ...        4.234426      281.632294          0.000053                  0.470510\n11    56  31.488019 -87.910747 2019-01-27  ...        4.234426      281.632294          0.000053                  0.470510\n12    56  31.488019 -87.910747 2019-01-28  ...        4.234426      281.632294          0.000053                  0.470510\n13    56  31.488019 -87.910747 2019-01-29  ...        4.234426      281.632294          0.000053                  0.470510\n14    56  31.488019 -87.910747 2019-01-30  ...        4.234426      281.632294          0.000053                  0.470510\n15    56  31.488019 -87.910747 2019-01-31  ...        4.234426      281.632294          0.000053                  0.470510\n16    56  31.488019 -87.910747 2019-02-01  ...        4.602291      287.666107          0.000048                  0.691063\n17    56  31.488019 -87.910747 2019-02-02  ...        4.602291      287.666107          0.000048                  0.691063\n18    56  31.488019 -87.910747 2019-02-03  ...        4.602291      287.666107          0.000048                  0.691063\n19    56  31.488019 -87.910747 2019-03-04  ...        4.449878      286.605103          0.000029                  0.541629\n20    56  31.488019 -87.910747 2019-03-05  ...        4.449878      286.605103          0.000029                  0.541629\n21    56  31.488019 -87.910747 2019-03-06  ...        4.449878      286.605103          0.000029                  0.541629\n22    56  31.488019 -87.910747 2019-03-07  ...        4.449878      286.605103          0.000029                  0.541629\n23    56  31.488019 -87.910747 2019-03-08  ...        4.449878      286.605103          0.000029                  0.541629\n24    56  31.488019 -87.910747 2019-03-27  ...        4.449878      286.605103          0.000029                  0.541629\n25    56  31.488019 -87.910747 2019-03-28  ...        4.449878      286.605103          0.000029                  0.541629\n26    56  31.488019 -87.910747 2019-03-29  ...        4.449878      286.605103          0.000029                  0.541629\n27    56  31.488019 -87.910747 2019-03-30  ...        4.449878      286.605103          0.000029                  0.541629\n28    56  31.488019 -87.910747 2019-03-31  ...        4.449878      286.605103          0.000029                  0.541629\n29    56  31.488019 -87.910747 2019-04-01  ...        4.353224      290.878571          0.000074                  0.486571\n..   ...        ...        ...        ...  ...             ...             ...               ...                       ...\n137   56  31.488019 -87.910747 2019-10-30  ...        3.678730      294.809784          0.000098                  0.524421\n138   56  31.488019 -87.910747 2019-10-31  ...        3.678730      294.809784          0.000098                  0.524421\n139   56  31.488019 -87.910747 2019-11-01  ...        4.009240      283.916229          0.000020                  0.525576\n140   56  31.488019 -87.910747 2019-11-02  ...        4.009240      283.916229          0.000020                  0.525576\n141   56  31.488019 -87.910747 2019-11-03  ...        4.009240      283.916229          0.000020                  0.525576\n142   56  31.488019 -87.910747 2019-11-04  ...        4.009240      283.916229          0.000020                  0.525576\n143   56  31.488019 -87.910747 2019-11-05  ...        4.009240      283.916229          0.000020                  0.525576\n144   56  31.488019 -87.910747 2019-11-06  ...        4.009240      283.916229          0.000020                  0.525576\n145   56  31.488019 -87.910747 2019-11-07  ...        4.009240      283.916229          0.000020                  0.525576\n146   56  31.488019 -87.910747 2019-11-09  ...        4.009240      283.916229          0.000020                  0.525576\n147   56  31.488019 -87.910747 2019-11-10  ...        4.009240      283.916229          0.000020                  0.525576\n148   56  31.488019 -87.910747 2019-11-11  ...        4.009240      283.916229          0.000020                  0.525576\n149   56  31.488019 -87.910747 2019-11-12  ...        4.009240      283.916229          0.000020                  0.525576\n150   56  31.488019 -87.910747 2019-11-13  ...        4.009240      283.916229          0.000020                  0.525576\n151   56  31.488019 -87.910747 2019-11-15  ...        4.009240      283.916229          0.000020                  0.525576\n152   56  31.488019 -87.910747 2019-11-16  ...        4.009240      283.916229          0.000020                  0.525576\n153   56  31.488019 -87.910747 2019-11-17  ...        4.009240      283.916229          0.000020                  0.525576\n154   56  31.488019 -87.910747 2019-11-18  ...        4.009240      283.916229          0.000020                  0.525576\n155   56  31.488019 -87.910747 2019-11-19  ...        4.009240      283.916229          0.000020                  0.525576\n156   56  31.488019 -87.910747 2019-11-20  ...        4.009240      283.916229          0.000020                  0.525576\n157   56  31.488019 -87.910747 2019-11-22  ...        4.009240      283.916229          0.000020                  0.525576\n158   56  31.488019 -87.910747 2019-11-23  ...        4.009240      283.916229          0.000020                  0.525576\n159   56  31.488019 -87.910747 2019-11-24  ...        4.009240      283.916229          0.000020                  0.525576\n160   56  31.488019 -87.910747 2019-11-25  ...        4.009240      283.916229          0.000020                  0.525576\n161   56  31.488019 -87.910747 2019-11-26  ...        4.009240      283.916229          0.000020                  0.525576\n162   56  31.488019 -87.910747 2019-12-01  ...        4.421877      284.216461          0.000052                  0.548777\n163   56  31.488019 -87.910747 2019-12-02  ...        4.421877      284.216461          0.000052                  0.548777\n164   56  31.488019 -87.910747 2019-12-03  ...        4.421877      284.216461          0.000052                  0.548777\n165   56  31.488019 -87.910747 2019-12-04  ...        4.421877      284.216461          0.000052                  0.548777\n166   56  31.488019 -87.910747 2019-12-05  ...        4.421877      284.216461          0.000052                  0.548777\n[167 rows x 10 columns]\nTraceback (most recent call last):\n  File \"GetEmissionsData.py\", line 4, in <module>\n    emissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/core/generic.py\", line 3020, in to_csv\n    formatter.save()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/formats/csvs.py\", line 157, in save\n    compression=self.compression)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/common.py\", line 421, in _get_handle\n    f = open(path_or_buf, mode)\nIOError: [Errno 2] No such file or directory: '/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv'\n",
+  "history_begin_time" : 1636036019107,
+  "history_end_time" : 1636036019587,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gqm38jse0gj",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1636035959017,
+  "history_end_time" : 1636035959040,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "t2o6gyrnrfi",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636035824781,
+  "history_end_time" : 1636035825409,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9j96g5idd9w",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034983309,
+  "history_end_time" : 1636034984739,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mx6wybmcihq",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n5     56  31.488019  ...          0.000053                 0.470510\n6     56  31.488019  ...          0.000053                 0.470510\n7     56  31.488019  ...          0.000053                 0.470510\n8     56  31.488019  ...          0.000053                 0.470510\n9     56  31.488019  ...          0.000053                 0.470510\n10    56  31.488019  ...          0.000053                 0.470510\n11    56  31.488019  ...          0.000053                 0.470510\n12    56  31.488019  ...          0.000053                 0.470510\n13    56  31.488019  ...          0.000053                 0.470510\n14    56  31.488019  ...          0.000053                 0.470510\n15    56  31.488019  ...          0.000053                 0.470510\n16    56  31.488019  ...          0.000048                 0.691063\n17    56  31.488019  ...          0.000048                 0.691063\n18    56  31.488019  ...          0.000048                 0.691063\n19    56  31.488019  ...          0.000029                 0.541629\n20    56  31.488019  ...          0.000029                 0.541629\n21    56  31.488019  ...          0.000029                 0.541629\n22    56  31.488019  ...          0.000029                 0.541629\n23    56  31.488019  ...          0.000029                 0.541629\n24    56  31.488019  ...          0.000029                 0.541629\n25    56  31.488019  ...          0.000029                 0.541629\n26    56  31.488019  ...          0.000029                 0.541629\n27    56  31.488019  ...          0.000029                 0.541629\n28    56  31.488019  ...          0.000029                 0.541629\n29    56  31.488019  ...          0.000074                 0.486571\n..   ...        ...  ...               ...                      ...\n137   56  31.488019  ...          0.000098                 0.524421\n138   56  31.488019  ...          0.000098                 0.524421\n139   56  31.488019  ...          0.000020                 0.525576\n140   56  31.488019  ...          0.000020                 0.525576\n141   56  31.488019  ...          0.000020                 0.525576\n142   56  31.488019  ...          0.000020                 0.525576\n143   56  31.488019  ...          0.000020                 0.525576\n144   56  31.488019  ...          0.000020                 0.525576\n145   56  31.488019  ...          0.000020                 0.525576\n146   56  31.488019  ...          0.000020                 0.525576\n147   56  31.488019  ...          0.000020                 0.525576\n148   56  31.488019  ...          0.000020                 0.525576\n149   56  31.488019  ...          0.000020                 0.525576\n150   56  31.488019  ...          0.000020                 0.525576\n151   56  31.488019  ...          0.000020                 0.525576\n152   56  31.488019  ...          0.000020                 0.525576\n153   56  31.488019  ...          0.000020                 0.525576\n154   56  31.488019  ...          0.000020                 0.525576\n155   56  31.488019  ...          0.000020                 0.525576\n156   56  31.488019  ...          0.000020                 0.525576\n157   56  31.488019  ...          0.000020                 0.525576\n158   56  31.488019  ...          0.000020                 0.525576\n159   56  31.488019  ...          0.000020                 0.525576\n160   56  31.488019  ...          0.000020                 0.525576\n161   56  31.488019  ...          0.000020                 0.525576\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\nTraceback (most recent call last):\n  File \"GetEmissionsData.py\", line 4, in <module>\n    emissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/core/generic.py\", line 3020, in to_csv\n    formatter.save()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/formats/csvs.py\", line 157, in save\n    compression=self.compression)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/pandas/io/common.py\", line 421, in _get_handle\n    f = open(path_or_buf, mode)\nIOError: [Errno 2] No such file or directory: '/home/zsun/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv'\n",
+  "history_begin_time" : 1636034769864,
+  "history_end_time" : 1636034770439,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gbr0lk41jy0",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034551284,
+  "history_end_time" : 1636034551779,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bg122y2j2j2",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034392648,
+  "history_end_time" : 1636034393128,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ogewigxtqdj",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034358075,
+  "history_end_time" : 1636034358952,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fbjpuln1doy",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1636033771830,
+  "history_end_time" : 1636033771878,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cb7tcalj0gt",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033712656,
+  "history_end_time" : 1636033712684,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fzg9dk2n26z",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"GetEmissionsData.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033668682,
+  "history_end_time" : 1636033668722,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "07alw3phnlk",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "     FID   Latitude  ...  Precip (Monthly) Cloud Fraction (Monthly)\n0     56  31.488019  ...          0.000053                 0.470510\n1     56  31.488019  ...          0.000053                 0.470510\n2     56  31.488019  ...          0.000053                 0.470510\n3     56  31.488019  ...          0.000053                 0.470510\n4     56  31.488019  ...          0.000053                 0.470510\n..   ...        ...  ...               ...                      ...\n162   56  31.488019  ...          0.000052                 0.548777\n163   56  31.488019  ...          0.000052                 0.548777\n164   56  31.488019  ...          0.000052                 0.548777\n165   56  31.488019  ...          0.000052                 0.548777\n166   56  31.488019  ...          0.000052                 0.548777\n[167 rows x 10 columns]\n",
+  "history_begin_time" : 1635988619036,
+  "history_end_time" : 1635988620846,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "koe8m53wwxx",
+  "history_input" : "import pandas as pd\nemissions = pd.read_csv('https://raw.githubusercontent.com/ZihengSun/EmissionAI/main/data/tropomi_epa_kvps_NO2_2019_56.csv' , parse_dates=[\"Date\"])\nprint(emissions)\nemissions.to_csv(\"~/geoweaver_demo/tropomi_epa_kvps_NO2_2019_56.csv\")\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1635887054404,
+  "history_end_time" : 1635887055980,
+  "history_notes" : null,
+  "history_process" : "aowlun",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},]

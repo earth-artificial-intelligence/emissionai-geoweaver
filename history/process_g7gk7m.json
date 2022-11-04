@@ -1,0 +1,761 @@
+[{
+  "history_id" : "56j8xkdmsfz",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\nTraceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 3621, in get_loc\n    return self._engine.get_loc(casted_key)\n  File \"pandas/_libs/index.pyx\", line 136, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/index.pyx\", line 142, in pandas._libs.index.IndexEngine.get_loc\nTypeError: '(slice(None, None, None), None)' is an invalid key\nDuring handling of the above exception, another exception occurred:\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 40, in <module>\n    plt.plot(X, y_rbf, c='g', label='RBF model')\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/pyplot.py\", line 2757, in plot\n    return gca().plot(\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_axes.py\", line 1632, in plot\n    lines = [*self._get_lines(*args, data=data, **kwargs)]\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_base.py\", line 312, in __call__\n    yield from self._plot_args(this, kwargs)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_base.py\", line 487, in _plot_args\n    x = _check_1d(xy[0])\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/cbook/__init__.py\", line 1327, in _check_1d\n    ndim = x[:, None].ndim\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/frame.py\", line 3505, in __getitem__\n    indexer = self.columns.get_loc(key)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 3628, in get_loc\n    self._check_indexing_error(key)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 5637, in _check_indexing_error\n    raise InvalidIndexError(key)\npandas.errors.InvalidIndexError: (slice(None, None, None), None)\n",
+  "history_begin_time" : 1651521836171,
+  "history_end_time" : 1651521841627,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jt05zcqlc5g",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\nTraceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 3621, in get_loc\n    return self._engine.get_loc(casted_key)\n  File \"pandas/_libs/index.pyx\", line 136, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/index.pyx\", line 142, in pandas._libs.index.IndexEngine.get_loc\nTypeError: '(slice(None, None, None), None)' is an invalid key\nDuring handling of the above exception, another exception occurred:\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 40, in <module>\n    plt.plot(X, y_rbf, c='g', label='RBF model')\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/pyplot.py\", line 2757, in plot\n    return gca().plot(\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_axes.py\", line 1632, in plot\n    lines = [*self._get_lines(*args, data=data, **kwargs)]\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_base.py\", line 312, in __call__\n    yield from self._plot_args(this, kwargs)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_base.py\", line 487, in _plot_args\n    x = _check_1d(xy[0])\n  File \"/opt/anaconda3/lib/python3.8/site-packages/matplotlib/cbook/__init__.py\", line 1327, in _check_1d\n    ndim = x[:, None].ndim\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/frame.py\", line 3505, in __getitem__\n    indexer = self.columns.get_loc(key)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 3628, in get_loc\n    self._check_indexing_error(key)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/base.py\", line 5637, in _check_indexing_error\n    raise InvalidIndexError(key)\npandas.errors.InvalidIndexError: (slice(None, None, None), None)\n",
+  "history_begin_time" : 1649179884198,
+  "history_end_time" : 1649179888198,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7f74u6vbtbe",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1643666956242,
+  "history_end_time" : 1643666956258,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "er8qrwdrasc",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1643125049851,
+  "history_end_time" : 1643125053369,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rv2akf1auye",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642966288728,
+  "history_end_time" : 1642966288740,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9woxep200zh",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642958113217,
+  "history_end_time" : 1642958113232,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3mns67iv6e4",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "  File \"SVR Model.py\", line 22\n    regression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642316565462,
+  "history_end_time" : 1642316565910,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yh9nvjbgcqe",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642233101999,
+  "history_end_time" : 1642233104415,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "33thtam3vbh",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642233053181,
+  "history_end_time" : 1642233056818,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oyxzfj1ai5z",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642230162974,
+  "history_end_time" : 1642230164707,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a9858snncll",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642230119306,
+  "history_end_time" : 1642230121158,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sbf5dybitom",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642229599709,
+  "history_end_time" : 1642229602529,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "li0297vfnti",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642227727017,
+  "history_end_time" : 1642227730924,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "73edyjvq3pr",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "  File \"SVR Model.py\", line 22\n    regression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642226788062,
+  "history_end_time" : 1642226788228,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z1mzo9q0pfs",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642116751183,
+  "history_end_time" : 1642116755093,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r6r4dzdn0tr",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1642116684759,
+  "history_end_time" : 1642116684815,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "dqqc5qnla95",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1642022966985,
+  "history_end_time" : 1642022970521,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "84dbr2ewfnt",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "  File \"SVR Model.py\", line 22\n    regression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n                                                                               ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1642022911351,
+  "history_end_time" : 1642022911530,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vtvwt2ql7jb",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "loop.py\nGetEmissionsData.py\nExploreDataProperties.py\nVisualizeFeatures.py\nDeepLearning_NN.py\nTrainModel_LSTM.py\ntest1.py\nData Preprocessing.py\nSVR Model.py\nRandom Forest Model.py\nDeploy ML.py\npython: can't open file 'SVR': [Errno 2] No such file or directory\n",
+  "history_begin_time" : 1641216004608,
+  "history_end_time" : 1641216009926,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "t5g55h",
+  "indicator" : "Done"
+},{
+  "history_id" : "a3xwv0j28zw",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1639374655724,
+  "history_end_time" : 1639374660181,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "jg3leu169py",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1639373558793,
+  "history_end_time" : 1639373561136,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pmhha0fjmo0",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\nimport os\nfrom pathlib import Path\nhome = str(Path.home())\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv(f'{home}/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig(f'{home}/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1639372900925,
+  "history_end_time" : 1639372903342,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vr0y3zxbiwx",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\nTraceback (most recent call last):\n  File \"/Users/l21-n02609-comm/gw-workspace/5eOIwUMcySnvilUCs7sVVpsGZl/SVR Model.py\", line 43, in <module>\n    plt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/pyplot.py\", line 966, in savefig\n    res = fig.savefig(*args, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/figure.py\", line 3015, in savefig\n    self.canvas.print_figure(fname, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backend_bases.py\", line 2255, in print_figure\n    result = print_method(\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backend_bases.py\", line 1669, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py\", line 509, in print_png\n    mpl.image.imsave(\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/matplotlib/image.py\", line 1616, in imsave\n    image.save(fname, **pil_kwargs)\n  File \"/Users/l21-n02609-comm/opt/anaconda3/lib/python3.9/site-packages/PIL/Image.py\", line 2237, in save\n    fp = builtins.open(filename, \"w+b\")\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/uhhmed/geoweaver_demo/SVR_model.png'\n",
+  "history_begin_time" : 1639372543688,
+  "history_end_time" : 1639372548618,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eehqmn2aon2",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345545905,
+  "history_end_time" : 1639345546075,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ifgf2hjs78i",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639345438423,
+  "history_end_time" : 1639345438554,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "882g3zrx6mg",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345394154,
+  "history_end_time" : 1639345394201,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "dda4s57kytn",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639345254184,
+  "history_end_time" : 1639345254203,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "cc54eu70uw6",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639344892386,
+  "history_end_time" : 1639344892405,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9i03012ijm5",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639326043378,
+  "history_end_time" : 1639326043505,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qi6vr4hqhtv",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325967960,
+  "history_end_time" : 1639325968027,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mnqbqvgcdk9",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639325950742,
+  "history_end_time" : 1639325950812,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "pie0odcpjkh",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324420030,
+  "history_end_time" : 1639324420167,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6z5w6ud75d9",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324286280,
+  "history_end_time" : 1639324286465,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "afbxw5mk7n1",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324213798,
+  "history_end_time" : 1639324213988,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gqgodbp0w8g",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639324159467,
+  "history_end_time" : 1639324159576,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mt63g0wgj59",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639282298850,
+  "history_end_time" : 1639282299036,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b7su7wyuiih",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1639281631833,
+  "history_end_time" : 1639281631977,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "llzrbbzlmc2",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1639280124779,
+  "history_end_time" : 1639280124840,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rn92ttwt6m2",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "('Model ', 'SVR: ', ' Performance:')\n('   MAE: ', 0.05170117200405689)\n('   MSE: ', 0.0036857502571577103)\n('   R2: ', 0.5958888534234995)\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 37, in <module>\n    plt.scatter(X, y, c='k', label='data')\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 3461, in scatter\n    ax = gca()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 969, in gca\n    return gcf().gca(**kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 586, in gcf\n    return figure()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636386562871,
+  "history_end_time" : 1636386564929,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a0nm0bqgdum",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "('Model ', 'SVR: ', ' Performance:')\n('   MAE: ', 0.05170117200405689)\n('   MSE: ', 0.0036857502571577103)\n('   R2: ', 0.5958888534234995)\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 37, in <module>\n    plt.scatter(X, y, c='k', label='data')\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 3461, in scatter\n    ax = gca()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 969, in gca\n    return gcf().gca(**kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 586, in gcf\n    return figure()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636145203984,
+  "history_end_time" : 1636145205651,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5twrsrr2zdn",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 3, in <module>\n    import seaborn as sns\nModuleNotFoundError: No module named 'seaborn'\n",
+  "history_begin_time" : 1636062897477,
+  "history_end_time" : 1636062898336,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jyovf2bwbhc",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "('Model ', 'SVR: ', ' Performance:')\n('   MAE: ', 0.05170117200405689)\n('   MSE: ', 0.0036857502571577103)\n('   R2: ', 0.5958888534234995)\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 37, in <module>\n    plt.scatter(X, y, c='k', label='data')\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 3461, in scatter\n    ax = gca()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 969, in gca\n    return gcf().gca(**kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 586, in gcf\n    return figure()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636062730933,
+  "history_end_time" : 1636062732226,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nqkltogpjcw",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "('Model ', 'SVR: ', ' Performance:')\n('   MAE: ', 0.05170117200405689)\n('   MSE: ', 0.0036857502571577103)\n('   R2: ', 0.5958888534234995)\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 37, in <module>\n    plt.scatter(X, y, c='k', label='data')\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 3461, in scatter\n    ax = gca()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 969, in gca\n    return gcf().gca(**kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 586, in gcf\n    return figure()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636062669412,
+  "history_end_time" : 1636062670661,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sy0lywiblzm",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1636062377651,
+  "history_end_time" : 1636062380284,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "t5l6b549j99",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1636062279692,
+  "history_end_time" : 1636062282853,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "4yh1178qg78",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636052899011,
+  "history_end_time" : 1636052900196,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "foedl46dlns",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636043260310,
+  "history_end_time" : 1636043261526,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i4gf8icsryl",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037961810,
+  "history_end_time" : 1636037964529,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "jk4ggzuj6rj",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1636037746829,
+  "history_end_time" : 1636037749657,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "q8nk4j7t24j",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037700839,
+  "history_end_time" : 1636037702022,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jk00i021ftu",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037532582,
+  "history_end_time" : 1636037533804,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xt5kr4hpsi5",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "('Model ', 'SVR: ', ' Performance:')\n('   MAE: ', 0.05170117200405689)\n('   MSE: ', 0.0036857502571577103)\n('   R2: ', 0.5958888534234995)\nTraceback (most recent call last):\n  File \"SVR Model.py\", line 37, in <module>\n    plt.scatter(X, y, c='k', label='data')\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 3461, in scatter\n    ax = gca()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 969, in gca\n    return gcf().gca(**kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 586, in gcf\n    return figure()\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/pyplot.py\", line 533, in figure\n    **kwargs)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backend_bases.py\", line 161, in new_figure_manager\n    return cls.new_figure_manager_given_figure(num, fig)\n  File \"/home/zsun/.local/lib/python2.7/site-packages/matplotlib/backends/_backend_tk.py\", line 1046, in new_figure_manager_given_figure\n    window = Tk.Tk(className=\"matplotlib\")\n  File \"/usr/lib/python2.7/lib-tk/Tkinter.py\", line 1828, in __init__\n    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)\n_tkinter.TclError: no display name and no $DISPLAY environment variable\n",
+  "history_begin_time" : 1636037158959,
+  "history_end_time" : 1636037160226,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mkdc9nhkhur",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636037119353,
+  "history_end_time" : 1636037120649,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y26ls57ns2m",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1636036982664,
+  "history_end_time" : 1636036985753,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "1agcwbxieu1",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036825073,
+  "history_end_time" : 1636036826299,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bzc0iikioag",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036575529,
+  "history_end_time" : 1636036576778,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7xv8dl1xuut",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036495212,
+  "history_end_time" : 1636036496510,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rz9wqkhv5hf",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036417249,
+  "history_end_time" : 1636036418045,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xi762ze0i8h",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036328403,
+  "history_end_time" : 1636036329225,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "g0ie1zavjr5",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036306466,
+  "history_end_time" : 1636036307298,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a0wv23yn6eo",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036263612,
+  "history_end_time" : 1636036264339,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3xb2sy7025h",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036132689,
+  "history_end_time" : 1636036133484,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hj6g14otblr",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036086924,
+  "history_end_time" : 1636036087667,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ew54l46aqoi",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636036023966,
+  "history_end_time" : 1636036024791,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gxc6a8e4vjc",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1636035960803,
+  "history_end_time" : 1636035960817,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wkl1psx4xmn",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636035828782,
+  "history_end_time" : 1636035829630,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6mx5jhruho9",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034991259,
+  "history_end_time" : 1636034993987,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "f95km1by4je",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034773402,
+  "history_end_time" : 1636034774143,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xatdssz2rqw",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034555288,
+  "history_end_time" : 1636034556029,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q48e29uj2zx",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034395419,
+  "history_end_time" : 1636034395796,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7gv870sk7rg",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636034361010,
+  "history_end_time" : 1636034361346,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6pqzztfw64t",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Running",
+  "history_begin_time" : 1636033773833,
+  "history_end_time" : 1636033773873,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bmz5auz25i6",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033716700,
+  "history_end_time" : 1636033716727,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vq0nhnmo0sk",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Traceback (most recent call last):\n  File \"SVR Model.py\", line 1, in <module>\n    import pandas as pd\nImportError: No module named pandas\n",
+  "history_begin_time" : 1636033715640,
+  "history_end_time" : 1636033715666,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "19wuv8tik6m",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1635988625216,
+  "history_end_time" : 1635988628441,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},{
+  "history_id" : "0y9vb90fvy4",
+  "history_input" : "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn import metrics\nfrom sklearn.svm import SVR\n\n\ndef showAccuracyMetrics(mlmethod, model, y_test, y_pred):    \n\tprint(\"Model \", mlmethod, \" Performance:\")\n\t#print(y_test.shape, y_pred.shape)\t\n\tmae = metrics.mean_absolute_error(y_test, \t\t\ty_pred)\n\tmse = metrics.mean_squared_error(y_test, \t\t\ty_pred)\n\tr2 = metrics.r2_score(y_test, y_pred)\n\tprint(\"   MAE: \", mae)\n\tprint(\"   MSE: \", mse)    \n\tprint(\"   R2: \", r2)\n\nregression_emissions = pd.read_csv('~/geoweaver_demo/preprocessed.csv')\n\nX = regression_emissions[['dayofyear']]\ny = regression_emissions['EPA_NO2/100000']\nxtrain, xtest, ytrain, ytest = train_test_split(X,y,test_size=0.30, random_state=42)\n\nxtrain = X.iloc[:116]\nytrain = y.iloc[:116]\nxtest = X.iloc[116:]\nytest = y.iloc[116:]\n\nsvr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.35)\nsvr_rbf.fit(X, y)\ny_rbf = svr_rbf.predict(X)\n\nshowAccuracyMetrics(\"SVR: \", svr_rbf, y, y_rbf)\n\nplt.scatter(X, y, c='k', label='data')\nplt.plot(X, y_rbf, c='g', label='RBF model')\nplt.xlabel('dayofyear')\nplt.ylabel('EPA_NO2/100000')\nplt.title('Support Vector Regression')\nplt.legend()\nplt.savefig('/Users/uhhmed/geoweaver_demo/SVR_model.png')",
+  "history_output" : "Model  SVR:   Performance:\n   MAE:  0.051701172004056876\n   MSE:  0.0036857502571577103\n   R2:  0.5958888534234995\n",
+  "history_begin_time" : 1635887062451,
+  "history_end_time" : 1635887065547,
+  "history_notes" : null,
+  "history_process" : "g7gk7m",
+  "host_id" : "22hpox",
+  "indicator" : "Done"
+},]
